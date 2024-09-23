@@ -105,7 +105,7 @@ else if  inviteData.consult_invite_color == "6"
                                 if agentList
                                     - var agentNum = 0
                                     for agent in agentList
-                                        if agent.organ && agent.organ == skill.id && agentNum < inviteData.consult_skill_maxagent
+                                        if agent.organs && agent.organs[skill.id] && agentNum < inviteData.consult_skill_maxagent
                                             - agentNum = agentNum + 1
                                             li(style="height: 23px;list-style: none outside none;margin-left: 6px;overflow: hidden;padding: 2px;")
                                                 a(href=baseUrl + '/im/text/' + appid + '.html?skill=' + skill.id + '&agent=' + agent.id, onclick='return openAgentChatDialog(this.href)', style='color: #777;    text-decoration: none;')
